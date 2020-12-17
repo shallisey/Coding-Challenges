@@ -50,3 +50,12 @@ I am going to use this as a place to write down somethings I learned and maybe s
   - I did this because I needed to update where spaces and trees where if I were to "land" on them.
   - You cannot alter strings from a loop because they are immutable. That is why I had to make copies as lists.
   - For this reason as well I needed to create a new list just so I could have an output that would correctly output the changes I made to the copy.
+
+
+  #### Day 4
+  - Part 1 of this challenge was mainly practice and adding to things that are already knew.
+    - An example was having to separate the passports I did not know you could separate by a double line break ('\n\n')
+    ```
+    day4AoC_inputs = file.read().split('\n\n')
+    ```
+    - This made it easy to access all possible passports.
