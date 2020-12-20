@@ -59,3 +59,9 @@ I am going to use this as a place to write down somethings I learned and maybe s
     day4AoC_inputs = file.read().split('\n\n')
     ```
     - This made it easy to access all possible passports.
+   - Part 2 had some new challenges.
+     - I needed to use some regex to check if a number had nine digits in it
+     - I also needed to check if a string began with # and had exactly 6 characters after that were
+    0-9 or a-f.
+   
+     
