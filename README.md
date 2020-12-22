@@ -64,4 +64,20 @@ I am going to use this as a place to write down somethings I learned and maybe s
      - I also needed to check if a string began with # and had exactly 6 characters after that were
     0-9 or a-f.
    
-     
+  #### Day 5
+   - I have heard of a binary search before but never really implemented on myself.
+   - I used slicing to get half of a given list, and as the loop
+   progresses I would update the given list to either the upper or lower half.
+   ```
+   # This will give the lower half of a given list
+   given_list[:len(given_list)//2]
+   # This will give the upper half of a list.
+   given_list[:len(given_list)//2]
+   ``` 
+   - I originally had a different function to make a list of the rows and columns, but
+   I decided to use some list comprehension to make the list instead because it brought it down
+   to just one line per row and column.
+   ```
+   rows = [row for row in range(128)]
+   columns = [col for col in range(8)]
+   ```
