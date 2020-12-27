@@ -82,3 +82,7 @@ I am going to use this as a place to write down somethings I learned and maybe s
    columns = [col for col in range(8)]
    ```
    - Part 2 was a pretty simple challenge. I just returned the value that was not in the list of all seat IDs.
+   
+  #### Day 6
+   - No more updates unless something interesting happens.
+   - Instead I am trying my best to comment every step of the challenges.
