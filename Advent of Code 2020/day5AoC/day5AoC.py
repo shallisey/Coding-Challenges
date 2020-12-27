@@ -53,10 +53,21 @@ def boarding_pass(lst_of_passes):
         # print("Rows: " + str(rows[0]) + ", ", "Columns: " + str(columns[0]) + ", ", "seat ID: " + str(seat_ID))
     # Max seat ID of all the seat ID's
     max_seat_ID = max(list_of_seat_ID)
-    return max_seat_ID
+    return list_of_seat_ID, max_seat_ID
 
 
-solution = boarding_pass(day5AoC_inputs)
-print(solution)
+list_of_seat_ID, solution = boarding_pass(day5AoC_inputs)
 
 #######PART 2##########
+
+def open_seat(all_seat_ID):
+    """This function will return the open seat that has not been taken yet."""
+    open_seat = []
+    # Loop through all seat IDs starting with 38, min seat ID, and 998, the max seat ID.
+    for seat in range(38, len(all_seat_ID)):
+        # If a seat is not in the all_seat_ID list then that is the open seat.
+        if seat not in all_seat_ID:
+            open_seat.append(seat)
+    return open_seat
+
+print(open_seat(list_of_seat_ID))

@@ -81,3 +81,4 @@ I am going to use this as a place to write down somethings I learned and maybe s
    rows = [row for row in range(128)]
    columns = [col for col in range(8)]
    ```
+   - Part 2 was a pretty simple challenge. I just returned the value that was not in the list of all seat IDs.
