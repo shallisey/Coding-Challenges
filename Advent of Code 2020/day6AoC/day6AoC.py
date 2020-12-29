@@ -48,9 +48,33 @@ def sum_of_answers(dict_of_answers):
         sum_of_answers += len(dict_of_answers[key])
     return sum_of_answers
 
-sum = sum_of_answers(answer_list)
-print('The sum of the counts is: ' + str(sum))
-
-
 
 ##############Part 2###############
+
+
+def answers_all_persons_answered(lst_of_inputs):
+    """This function returns the sum of all answers in which everyone in a group answered yes.."""
+    # Store the answers that were shared in a group
+    yes_answers = []
+    # Loop through all groups
+    for group in lst_of_inputs:
+        # persons is really just the group but in a list so it is easier use the data
+        persons = group.split('\n')
+        # This is the first persons answers
+        # This the standard for all answers to be checked
+        check = set(persons[0])
+        # Loop through all individual persons answer starting from the 2nd/1st element of the list
+        for individual in range(1, len(persons)):
+            # Bitwise operator to add all answers that equal the check
+            check &= set(persons[individual])
+        # If any answer is yes through all persons then update yes answers
+        yes_answers.append(len(check))
+    result = sum(yes_answers)
+    return result
+
+
+sum_of_part_1 = sum_of_answers(answer_list)
+print('The sum of the part 1 is: ' + str(sum_of_part_1))
+
+sum_answers = answers_all_persons_answered(day6AoC_inputs)
+print("The sum of part 2 is: " + str(sum_answers))
